@@ -77,3 +77,10 @@ You will see and drone on your game stage
   ├── README.md # You're here 
   └── requirements.txt # Python dependencies</pre>
 
+To train the RL policy run:
+```Python train.py```
+The output training_policy gets stored as zip file in models/trainig_policy.zip
+
+### To note
+The training and inference programs does not happen hand in hand but not limited to. When the inference happens trainingI_policy.zip is used and not trained along with. However this can be done by modifying the code in train.py and inference.py.
+
