@@ -57,6 +57,9 @@ After this open your Unreal project go to World Settings -> GmaeMode -> Choose A
 Now run the project
 
 You will see and drone on your game stage
+You could use yopur own maps and environment as the game stage. You can download it from fab -> filer to free -> Select fab -> Add to library
+!!Keywords for search: 'Urban City' 'Modular Cuty' 'Roads' 'City'
+!!! Download fab that are compatible to your environment
 
 ## 📁 Repository Structure
 
@@ -72,11 +75,15 @@ You will see and drone on your game stage
        |--yolov8n.pt
  |--control.py
  |--train_policy.py
+</pre>
 
-To train the RL policy run:
+ ## Clone this repo by running
+``` git clone https://github.com/GauravVRich/Auto_drone.git```
+ 
+To train the RL policy -run:
 ```Python train_policy.py```
-The output training_policy gets stored as zip file in models/trained_policy.zip
+The output training_policy gets stored as zip file in rl_agent/trained_policy.zip
 
 ### To note
-The training and inference programs does not happen hand in hand but not limited to. When the inference happens trained_policy.zip is used and not trained along with. However this can be done by modifying the code in train.py and control.py.
+The training and inference programs does not happen hand in hand but not limited to. When the inference happens trained_policy.zip is used and not trained along with. However this can be done by modifying the code in train.py and control.py
 
