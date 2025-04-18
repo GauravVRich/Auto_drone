@@ -1,0 +1,10 @@
+airsim
+time
+numpy
+stable_baselines3
+gym
+os
+shimmy
+ultralytics
+opencv-python
+pytorch
