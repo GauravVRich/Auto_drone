@@ -77,13 +77,29 @@ You could use yopur own maps and environment as the game stage. You can download
  |--train_policy.py
 </pre>
 
- ## Clone this repo by running
+# About the work
+
+## Clone this repo by running
 ``` git clone https://github.com/GauravVRich/Auto_drone.git```
- 
+
+## Install dependencies
+Run ```pip intsall -r requirements.txt```
+
+## Generate trained RL policy
 To train the RL policy -run:
 ```Python train_policy.py```
 The output training_policy gets stored as zip file in rl_agent/trained_policy.zip
 
 ### To note
 The training and inference programs does not happen hand in hand but not limited to. When the inference happens trained_policy.zip is used and not trained along with. However this can be done by modifying the code in train.py and control.py
+
+In process overview:
+The trained_policy.zip gets updated alongside the control.py. The collision, last_action, distance to goal are considered for the updating the reward system
+
+## Inference
+Make sure the unreal project is running before executing control.py
+
+Run ```python control.py```
+
+Observe the drone reacing its goal coordinagtes in Unreal Engine. Try changing the goal; pointys to observe drone behaviour and for training the policy
 
