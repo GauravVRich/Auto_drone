@@ -61,26 +61,22 @@ You will see and drone on your game stage
 ## 📁 Repository Structure
 
 <pre>Auto_drone/ 
-  ├── models/
-  │ └── trained_policy.zip # Pretrained PPO policy 
-  ├── scripts/
-  │   ├── train.py # RL training script 
-  │ └── infer.py # Inference using trained model 
-  ├── env/ 
-  │ └── drone_env.py # Custom drone environment 
-  ├── utils/ 
-  │ └── helpers.py # Utility functions
-  ├── results/ 
-  │ ├── simulation_gif.gif # Test run snapshots / simulation GIF 
-  │ └── logs/ # Training logs ├── demo/ 
-  │ └── demo_video.mp4 # Route finding demo video 
-  ├── README.md # You're here 
-  └── requirements.txt # Python dependencies</pre>
+  ├── drone_controller/
+   |--rl-agent/
+       |--trained_policy.zip
+   |--utils/
+       |--avoidance.py
+       |--perception.py
+       |--planner.py
+   |--yolo_model
+       |--yolov8n.pt
+ |--control.py
+ |--train_policy.py
 
 To train the RL policy run:
-```Python train.py```
-The output training_policy gets stored as zip file in models/trainig_policy.zip
+```Python train_policy.py```
+The output training_policy gets stored as zip file in models/trained_policy.zip
 
 ### To note
-The training and inference programs does not happen hand in hand but not limited to. When the inference happens trainingI_policy.zip is used and not trained along with. However this can be done by modifying the code in train.py and inference.py.
+The training and inference programs does not happen hand in hand but not limited to. When the inference happens trained_policy.zip is used and not trained along with. However this can be done by modifying the code in train.py and control.py.
 
