@@ -78,6 +78,7 @@ You could use yopur own maps and environment as the game stage. You can download
 </pre>
 
 # About the work
+This work uses Reinforcement learning ouylaying traing and trained policy utilization for route finding. This happens along with yolov8n model that is used for object detection to mitigate collision amd aid path planning.
 
 ## Clone this repo by running
 ``` git clone https://github.com/GauravVRich/Auto_drone.git```
@@ -101,5 +102,10 @@ Make sure the unreal project is running before executing control.py
 
 Run ```python control.py```
 
-Observe the drone reacing its goal coordinagtes in Unreal Engine. Try changing the goal; pointys to observe drone behaviour and for training the policy
+Observe the drone reacing its goal coordinagtes in Unreal Engine. Try changing the goal; points to observe drone behaviour and for training the policy
 
+# Demo video
+Find the video in this drive link
+https://docs.google.com/forms/d/e/1FAIpQLSclf67SIssWY9UN0mBJ3nDnoKFcOEIkp8i8ZWJ7CjZxRT2EoA/viewform?usp=sharing
+
+# THANK YOU!
