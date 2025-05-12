@@ -31,8 +31,6 @@ class AirSimDroneEnv(gym.Env):
         return self._get_obs()
 
     def _get_obs(self):
-        # Dummy observation (customize with YOLO + depth data later)
-        # For example: [road, tree, building, dist_front, ...]
         return np.random.rand(10).astype(np.float32)
 
     def step(self, action):
@@ -88,7 +86,7 @@ class AirSimDroneEnv(gym.Env):
         if dist_to_goal < 2.0:
             reward += 10.0  # reached goal!
 
-        # --- 7. Placeholder: reward for being over a road (YOLO detection etc.) ---
+        # --- 7. Placeholder: reward for being over a road ---
         # Example: Add small reward if the observation detects road ahead (dummy for now)
         obs = self._get_obs()
         if obs[0] > 0.5:  # Assuming obs[0] = confidence of "road" ahead
@@ -100,8 +98,6 @@ class AirSimDroneEnv(gym.Env):
             reward -= 0.5  # penalize getting close
 
         return reward
-
-# Optional: Check if env is valid
 # check_env(AirSimDroneEnv())
 
 env = AirSimDroneEnv()
